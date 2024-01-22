@@ -72,9 +72,23 @@ function draw() {
   //background
   fill(21, 40, 125);
   rect(0,635,365,425);
+
+  //green circle
   fill('green');
   stroke('white');
   strokeWeight(5);
   circle(175,815,150)
+
+  //red star
+  let starTopX = 175;
+  let startTopY = 740;
+
+  let starArmTopY = 800;
+  fill('red');
+  triangle(starTopX,startTopY, 155,starArmTopY, 195,starArmTopY);
+
+  triangle(155,starArmTopY, 95,starArmTpoY, 140,starArmTopY+40);
+ 
+
 
 }
