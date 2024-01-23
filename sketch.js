@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(365, 1000);
+  createCanvas(365, 1500);
 }
 
 function draw() {
@@ -11,6 +11,7 @@ function draw() {
   rect(0,0,365,180);
   
   //circle
+  stroke('black');
   strokeWeight(2);
   fill('white');
   circle(90,90,150);
@@ -71,23 +72,51 @@ function draw() {
 
   //background
   fill(21, 40, 125);
-  rect(0,635,365,425);
+  rect(0,635,365,410);
 
   //green circle
   fill('green');
   stroke('white');
-  strokeWeight(5);
-  circle(175,815,150)
+  strokeWeight(4);
+  circle(176,827,167);
 
   //red star
-  let starTopX = 175;
-  let startTopY = 740;
-
-  let starArmTopY = 800;
+  strokeWeight(0);
   fill('red');
-  triangle(starTopX,startTopY, 155,starArmTopY, 195,starArmTopY);
+  triangle(175,740, 155,800, 195,800);//head
+  triangle(155,800, 95,800, 140,840);//leftarm
+  triangle(195,800, 255,800, 210,840);//rightarm
+  triangle(140,840, 120,890, 175,865);//leftleg
+  triangle(210,840, 175,865, 230,895);//rightleg
 
-  triangle(155,starArmTopY, 95,starArmTpoY, 140,starArmTopY+40);
+  //inside of star
+  triangle(155,800,195,800,140,840);
+  triangle(140,840,210,840,175,865);
+  triangle(195,800,210,840,140,840);
+  strokeWeight(2);
+  stroke('red');
+  line(155,800,140,840);
+  line(195,800,140,840);
+  line(195,800,210,840);
+  line(210,840,175,865);
+  line(140,840,175,865);
+  
+
+  //star outline
+  strokeWeight(4);
+  stroke('white');
+  line(175,740,195,800);
+  line(195,800,255,800);
+  line(256,800,210,840);
+  line(210,840,230,895);
+  line(230,895,175,865);
+  line(175,865,120,890);
+  line(119,891,140,840);
+  line(140,840,95,800);
+  line(95,800,155,800);
+  line(155,800,175,740);
+
+  
  
 
 
